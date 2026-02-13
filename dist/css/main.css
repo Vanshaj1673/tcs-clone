@@ -704,20 +704,21 @@
   }
   .navbar__menu-btn {
     display: flex;
-    order: 1;
+    order: 4;
     margin: 0;
-    padding: 10px;
+    margin-right: 5px;
+    padding: 12px;
     border: none;
     background: transparent;
     z-index: 1001;
     flex-shrink: 0;
   }
   .navbar__logo {
-    order: 2;
-    margin: 0 10px;
+    order: 1;
+    margin: 0 10px 0 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-shrink: 1;
     min-width: 0;
   }
@@ -733,19 +734,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 0 10px;
     padding: 10px;
     visibility: visible;
     opacity: 1;
     flex-shrink: 0;
   }
   .navbar__tata-logo {
-    order: 4;
+    order: 2;
     display: flex;
     align-items: center;
-    margin: 0 0 0 5px;
+    margin: 0 10px;
     flex-shrink: 1;
     min-width: 0;
+    margin-left: auto;
   }
   .navbar__tata-logo img {
     max-width: 100%;
@@ -793,18 +795,20 @@
     padding: 0 10px;
   }
   .navbar__menu-btn {
-    padding: 5px;
+    padding: 15px;
+    margin-right: 10px;
   }
-  .navbar__menu-btn .navbar__hamburger-line {
-    width: 22px;
-    height: 2px;
-    margin-bottom: 4px;
+  t .navbar__menu-btn.is-active .navbar__hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
   }
-  .navbar__menu-btn .navbar__hamburger-line:nth-child(2) {
-    width: 16px;
+  t .navbar__menu-btn.is-active .navbar__hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  t .navbar__menu-btn.is-active .navbar__hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
   .navbar__logo {
-    margin: 0 5px;
+    margin: 0 5px 0 0;
   }
   .navbar__logo img {
     height: 24px;
@@ -812,13 +816,13 @@
   }
   .navbar__search-trigger {
     padding: 5px;
-    margin-right: 5px;
+    margin: 0 5px;
   }
   .navbar__search-trigger img {
     width: 16px;
   }
   .navbar__tata-logo {
-    margin-left: 0;
+    margin: 0 5px;
   }
   .navbar__tata-logo img {
     height: 20px;
@@ -911,6 +915,35 @@
 }
 .search-bar .autocomplete-item:last-child {
   border-bottom: none;
+}
+@media screen and (max-width: 600px) {
+  .search-bar__container {
+    padding: 0 20px;
+  }
+  .search-bar__input {
+    font-size: 16px;
+  }
+  .search-bar__input::-moz-placeholder {
+    font-size: 16px;
+  }
+  .search-bar__input::placeholder {
+    font-size: 16px;
+  }
+  .search-bar__icon-img {
+    width: 20px;
+    height: 20px;
+  }
+  .search-bar__close {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+  }
+  .search-bar__autocomplete-list {
+    padding: 15px 20px;
+  }
+  .search-bar .autocomplete-item {
+    font-size: 14px;
+  }
 }
 
 .filters {

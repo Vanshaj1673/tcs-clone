@@ -21,9 +21,10 @@
 
         &__menu-btn {
             display: flex;
-            order: 1;
+            order: 4; 
             margin: 0;
-            padding: 10px;
+            margin-right: 5px; 
+            padding: 12px;
             border: none;
             background: transparent;
             z-index: 1001;
@@ -31,11 +32,11 @@
         }
 
         &__logo {
-            order: 2;
-            margin: 0 10px;
+            order: 1; 
+            margin: 0 10px 0 0;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; 
             flex-shrink: 1;
             min-width: 0;
 
@@ -52,7 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0;
+            margin: 0 10px;
             padding: 10px;
             visibility: visible;
             opacity: 1;
@@ -60,12 +61,13 @@
         }
 
         &__tata-logo {
-            order: 4;
+            order: 2;
             display: flex;
             align-items: center;
-            margin: 0 0 0 5px;
+            margin: 0 10px;
             flex-shrink: 1;
             min-width: 0;
+            margin-left: auto; 
 
             img {
                 max-width: 100%;
@@ -125,31 +127,36 @@
         }
 
         &__menu-btn {
-            padding: 5px;
+            padding: 15px; 
+            margin-right: 10px; t
 
-            .navbar__hamburger-line {
-                width: 22px;
-                height: 2px;
-                margin-bottom: 4px;
+            &.is-active .navbar__hamburger-line {
+                &:nth-child(1) {
+                    transform: translateY(6px) rotate(45deg); 
+                }
 
                 &:nth-child(2) {
-                    width: 16px;
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-6px) rotate(-45deg);
                 }
             }
         }
 
         &__logo {
-            margin: 0 5px;
+            margin: 0 5px 0 0;
 
             img {
                 height: 24px;
-                max-width: 80px;
+                max-width: 80px; 
             }
         }
 
         &__search-trigger {
             padding: 5px;
-            margin-right: 5px;
+            margin: 0 5px;
 
             img {
                 width: 16px;
@@ -157,7 +164,7 @@
         }
 
         &__tata-logo {
-            margin-left: 0;
+            margin: 0 5px;
 
             img {
                 height: 20px;

@@ -93,4 +93,37 @@
             border-bottom: none;
         }
     }
+
+    @include responsive($bp-sm) {
+        &__container {
+            padding: 0 20px;
+        }
+
+        &__input {
+            font-size: 16px;
+
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+
+        &__icon-img {
+            width: 20px;
+            height: 20px;
+        }
+
+        &__close {
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+        }
+
+        &__autocomplete-list {
+            padding: 15px 20px;
+        }
+
+        .autocomplete-item {
+            font-size: 14px;
+        }
+    }
 }
