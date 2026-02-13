@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" class="reset-box">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Navbar Clone</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body class="page">
+
+    <header class="navbar" id="mainNavbar">
+        <section class="search-bar" id="searchBar" tabindex="0">
+            <div class="search-bar__container">
+                <div class="search-bar__icon">
+                    <img src="assets/search-icon.svg" alt="Search" class="search-bar__icon-img">
+                </div>
+                <input type="text" class="search-bar__input" id="searchInput" placeholder="What are you looking for?" tabindex="0">
+                <img src="assets/close-img.svg" alt="Close" class="search-bar__close" id="searchClose">
+            </div>
+            <div class="search-bar__autocomplete" id="autocompleteBox">
+                <ul class="search-bar__autocomplete-list" id="autocompleteList"></ul>
+            </div>
+        </section>
+        <div class="navbar__wrapper">
+            <button class="navbar__menu-btn" id="menuBtn" aria-label="Menu">
+                <div class="navbar__hamburger">
+                    <span class="navbar__hamburger-line"></span>
+                    <span class="navbar__hamburger-line"></span>
+                    <span class="navbar__hamburger-line"></span>
+                </div>
+            </button>
+            <div class="navbar__logo">
+                <img src="assets/tcs_logo.svg" alt="TCS Logo" class="navbar__logo-img">
+            </div>
+            <div class="navbar__tata-logo">
+                <img src="assets/tata_logo.svg" alt="Tata" class="navbar__tata-logo-img">
+            </div>
+            
+            <nav class="navbar__nav">
+                <ul class="navbar__links">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">What we do</a>
+                        <div class="navbar__underline"></div>
+                        <div class="navbar__dropdown">
+                            <button class="dropdown__close" aria-label="Close menu">
+                                <i class="fa-solid fa-xmark icon"></i>
+                            </button>
+                            <div class="dropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item active" data-sub="overview">
+                                        <div class="dropdown__label">
+                                            <span>Overview</span>
+                                            <i class="fa-solid fa-angle-right icon dropdown__label-icon"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="industries">
+                                        <div class="dropdown__label">
+                                            <span>Industries</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="services">
+                                        <div class="dropdown__label">
+                                            <span>Services</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="products">
+                                        <div class="dropdown__label">
+                                            <span>Products and Platforms</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="research">
+                                        <div class="dropdown__label">
+                                            <span>Research & Innovation</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="dropdown__content-wrapper">
+                                    <div class="dropdown__sub-content active" id="overview">
+                                        <div class="dropdown__overview">
+                                            <h3 class="dropdown__heading">TCS is here to make a difference through technology.</h3>
+                                            <p class="dropdown__desc">Leading the way in innovation for over 50 years, we build greater futures for businesses across multiple industries and 131 countries.</p>
+                                            <a href="#" class="dropdown__btn">Discover all solutions</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown__sub-content" id="industries">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Banking</a>
+                                                <a href="#">Capital Markets</a>
+                                                <a href="#">Consumer Goods and Distribution</a>
+                                                <a href="#">Communications, Media, and Information Services</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Education</a>
+                                                <a href="#">Energy, Resources, and Utilities</a>
+                                                <a href="#">Healthcare</a>
+                                                <a href="#">High Tech</a>
+                                                <a href="#">Insurance</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Life Sciences</a>
+                                                <a href="#">Manufacturing</a>
+                                                <a href="#">Public Services</a>
+                                                <a href="#">Retail</a>
+                                                <a href="#">Travel and Logistics</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown__sub-content" id="services">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Cloud</a>
+                                                <a href="#">Cognitive Business Operations</a>
+                                                <a href="#">Consulting</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Cybersecurity</a>
+                                                <a href="#">Data and Analytics</a>
+                                                <a href="#">Enterprise Solutions</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">IoT and Digital Engineering</a>
+                                                <a href="#">TCS Interactive</a>
+                                                <a href="#">Sustainability Services</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown__sub-content" id="products">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">TCS ADD™</a>
+                                                <a href="#">TCS BANCS™</a>
+                                                <a href="#">TCS BFSI Platforms</a>
+                                                <a href="#">TCS CHROMA™</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Education</a>
+                                                <a href="#">Energy, Resources, and Utilities</a>
+                                                <a href="#">Healthcare</a>
+                                                <a href="#">High Tech</a>
+                                                <a href="#">Insurance</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Life Sciences</a>
+                                                <a href="#">Manufacturing</a>
+                                                <a href="#">Public Services</a>
+                                                <a href="#">Retail</a>
+                                                <a href="#">Travel and Logistics</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown__sub-content" id="research">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">TCS Research</a>
+                                                <a href="#">TCS Pace™</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Who we are</a>
+                        <div class="navbar__underline"></div>
+                        <div class="navbar__dropdown">
+                            <div class="dropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item active" data-sub="who-overview">
+                                        <div class="dropdown__label"><span>Overview</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="who-about">
+                                        <div class="dropdown__label"><span>About Us</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="who-leadership">
+                                        <div class="dropdown__label"><span>Leadership</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="who-news">
+                                        <div class="dropdown__label"><span>In the news</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                </ul>
+                                <div class="dropdown__content-wrapper">
+                                    <div class="dropdown__sub-content active" id="who-overview">
+                                        <div class="dropdown__overview">
+                                            <h3 class="dropdown__heading">We're in it for good, driving positive change for the benefit of all.</h3>
+                                            <p class="dropdown__desc">Our expert, committed team put our shared beliefs into action – every day. Together, we combine innovation and collective knowledge to create the extraordinary.</p>
+                                            <a href="#" class="dropdown__btn">Discover the difference</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="who-about">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Corporate Sustainability</a>
+                                                <a href="#">Diversity, Equity, and Inclusion</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Corporate Social Responsibility</a>
+                                                <a href="#">The TCS Way</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Sports Sponsorships</a>
+                                                <a href="#">Alliances</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="who-leadership">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">CEO & Managing Director</a>
+                                                <a href="#">Chief Operating Officer</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Chief Financial Officer</a>
+                                                <a href="#">Chief Technology Officer</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Chief Human Resources Officer</a>
+                                                <a href="#">Board of Directors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="who-news">
+                                        <div class="dropdown__news">
+                                            <h3 class="dropdown__news-heading">RECENT NEWS</h3>
+                                            <div class="dropdown__news-item">
+                                                <p class="dropdown__news-date">13 Mar 2023</p>
+                                                <p class="dropdown__news-title">TCS Debuts on Forbes List of America's Best Large Employers</p>
+                                            </div>
+                                            <div class="dropdown__news-item">
+                                                <p class="dropdown__news-date">06 Mar 2023</p>
+                                                <p class="dropdown__news-title">TCS Named a Top Employer in the UAE, Saudi Arabia and South Africa</p>
+                                            </div>
+                                            <a href="#" class="dropdown__news-link">View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Insights</a>
+                        <div class="navbar__underline"></div>
+                        <div class="navbar__dropdown">
+                            <div class="dropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item active" data-sub="insights-overview">
+                                        <div class="dropdown__label"><span>Overview</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="insights-customer">
+                                        <div class="dropdown__label"><span>Customer Stories</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="insights-perspectives">
+                                        <div class="dropdown__label"><span>Perspectives</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="insights-topics">
+                                        <div class="dropdown__label"><span>Topics</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                </ul>
+                                <div class="dropdown__content-wrapper">
+                                    <div class="dropdown__sub-content active" id="insights-overview">
+                                        <div class="dropdown__overview">
+                                            <h3 class="dropdown__heading">Extraordinary expertise leads to remarkable results.</h3>
+                                            <p class="dropdown__desc">We share news, insights, analysis and research – tailored to your unique interests – to help you deepen your knowledge and impact.</p>
+                                            <a href="#" class="dropdown__btn">Discover Expert Insights</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="insights-customer">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Banking & Finance</a>
+                                                <a href="#">Healthcare</a>
+                                                <a href="#">Retail</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Manufacturing</a>
+                                                <a href="#">Energy & Utilities</a>
+                                                <a href="#">Telecommunications</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Public Sector</a>
+                                                <a href="#">Travel & Logistics</a>
+                                                <a href="#">Media & Entertainment</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="insights-perspectives">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Artificial Intelligence</a>
+                                                <a href="#">Cloud Computing</a>
+                                                <a href="#">Cybersecurity</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Digital Transformation</a>
+                                                <a href="#">Data Analytics</a>
+                                                <a href="#">Sustainability</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Future of Work</a>
+                                                <a href="#">Innovation</a>
+                                                <a href="#">Industry 4.0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="insights-topics">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Artificial Intelligence</a>
+                                                <a href="#">Cloud Computing</a>
+                                                <a href="#">Cybersecurity</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Digital Transformation</a>
+                                                <a href="#">Data Analytics</a>
+                                                <a href="#">Sustainability</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Future of Work</a>
+                                                <a href="#">Innovation</a>
+                                                <a href="#">Industry 4.0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Careers</a>
+                        <div class="navbar__underline"></div>
+                        <div class="navbar__dropdown">
+                            <div class="dropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item active" data-sub="careers-overview">
+                                        <div class="dropdown__label">
+                                            <span>Overview</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="careers-india">
+                                        <div class="dropdown__label">
+                                            <span>India</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="careers-americas">
+                                        <div class="dropdown__label">
+                                            <span>Americas</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="careers-asia">
+                                        <div class="dropdown__label">
+                                            <span>Asia Pacific</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="careers-europe">
+                                        <div class="dropdown__label">
+                                            <span>Europe and UK</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="careers-mea">
+                                        <div class="dropdown__label">
+                                            <span>Middle East and Africa</span>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="dropdown__content-wrapper">
+
+                                    <div class="dropdown__sub-content active" id="careers-overview">
+                                        <div class="dropdown__overview">
+                                            <h3 class="dropdown__heading">Want to be a global change-maker? Join our team.</h3>
+                                            <p class="dropdown__desc">At TCS, we believe exceptional work begins with hiring, celebrating and nurturing the best people — from all walks of life.</p>
+                                            <a href="#" class="dropdown__btn">Join Us</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="dropdown__sub-content" id="careers-india">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Mumbai</a>
+                                                <a href="#">Delhi</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Bangalore</a>
+                                                <a href="#">Hyderabad</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Chennai</a>
+                                                <a href="#">Pune</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="careers-americas">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Argentina</a>
+                                                <a href="#">Brazil</a>
+                                                <a href="#">Canada</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Colombia</a>
+                                                <a href="#">Ecuador</a>
+                                                <a href="#">Mexico</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Uruguay</a>
+                                                <a href="#">USA</a>
+                                                <a href="#">Chile</a>
+                                                <a href="#">Peru</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="careers-asia">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Argentina</a>
+                                                <a href="#">Brazil</a>
+                                                <a href="#">Canada</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Colombia</a>
+                                                <a href="#">Ecuador</a>
+                                                <a href="#">Mexico</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Uruguay</a>
+                                                <a href="#">USA</a>
+                                                <a href="#">Chile</a>
+                                                <a href="#">Peru</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="careers-europe">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Argentina</a>
+                                                <a href="#">Brazil</a>
+                                                <a href="#">Canada</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Colombia</a>
+                                                <a href="#">Ecuador</a>
+                                                <a href="#">Mexico</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Uruguay</a>
+                                                <a href="#">USA</a>
+                                                <a href="#">Chile</a>
+                                                <a href="#">Peru</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="careers-mea">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Argentina</a>
+                                                <a href="#">Brazil</a>
+                                                <a href="#">Canada</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Colombia</a>
+                                                <a href="#">Ecuador</a>
+                                                <a href="#">Mexico</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Uruguay</a>
+                                                <a href="#">USA</a>
+                                                <a href="#">Chile</a>
+                                                <a href="#">Peru</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Investors</a>
+                        <div class="navbar__underline"></div>
+                        <div class="navbar__dropdown">
+                            <div class="dropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item active" data-sub="investors-overview">
+                                        <div class="dropdown__label"><span>Overview</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="investors-financials">
+                                        <div class="dropdown__label"><span>Financials</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                    <li class="dropdown__item" data-sub="investors-governance">
+                                        <div class="dropdown__label"><span>Governance</span><i class="fa-solid fa-angle-right"></i></div>
+                                    </li>
+                                </ul>
+                                <div class="dropdown__content-wrapper">
+                                    <div class="dropdown__sub-content active" id="investors-overview">
+                                        <div class="dropdown__overview">
+                                            <h3 class="dropdown__heading">Driving sustainable growth and value.</h3>
+                                            <p class="dropdown__desc">Transparent communication and long-term commitment to our shareholders.</p>
+                                            <a href="#" class="dropdown__btn">Investor Relations</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="investors-financials">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Annual Reports</a>
+                                                <a href="#">Quarterly Results</a>
+                                                <a href="#">Financial Statements</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Investor Presentations</a>
+                                                <a href="#">Earnings Call Transcripts</a>
+                                                <a href="#">Dividend Information</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Stock Information</a>
+                                                <a href="#">SEC Filings</a>
+                                                <a href="#">Financial Calendar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__sub-content" id="investors-governance">
+                                        <div class="dropdown__grid">
+                                            <div class="dropdown__column">
+                                                <a href="#">Board of Directors</a>
+                                                <a href="#">Corporate Governance</a>
+                                                <a href="#">Committees</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Policies & Guidelines</a>
+                                                <a href="#">Code of Conduct</a>
+                                                <a href="#">Compliance</a>
+                                            </div>
+                                            <div class="dropdown__column">
+                                                <a href="#">Shareholder Information</a>
+                                                <a href="#">ESG Reports</a>
+                                                <a href="#">Risk Management</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="navbar__search-trigger" id="searchTrigger">
+                <img src="assets/search-icon.svg" alt="Search" class="navbar__search-icon-img">
+            </div>
+
+            <div class="navbar__right">
+                <ul class="navbar__utility-links">
+                    <li><a href="#" class="navbar__utility-link">CONTACT US</a></li>
+                    <li><a href="#" class="navbar__utility-link">TCS WORLDWIDE</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="navbar__mobile-menu" id="mobileMenu">
+            <div class="navbar__mobile-wrapper">
+                <nav class="navbar__mobile-nav">
+                    <ul class="navbar__mobile-links">
+
+                        <li class="navbar__mobile-item">
+                            <div class="navbar__mobile-header">
+                                <span class="navbar__mobile-link">What we do</span>
+                                <i class="fa-solid fa-chevron-down navbar__mobile-icon"></i>
+                            </div>
+                            <ul class="navbar__mobile-dropdown">
+                                <li class="navbar__mobile-dropdown-item">
+                                    <a href="#" class="navbar__mobile-dropdown-link">Overview</a>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Industries</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Banking</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Healthcare</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Retail</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Services</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Cloud</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Cybersecurity</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Data Analytics</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Products and Platforms</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">TCS BANCS™</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">TCS CHROMA™</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">TCS ADD™</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Research & Innovation</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">TCS Research</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">TCS Pace™</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="navbar__mobile-item">
+                            <div class="navbar__mobile-header">
+                                <span class="navbar__mobile-link">Who we are</span>
+                                <i class="fa-solid fa-chevron-down navbar__mobile-icon"></i>
+                            </div>
+                            <ul class="navbar__mobile-dropdown">
+                                <li class="navbar__mobile-dropdown-item">
+                                    <a href="#" class="navbar__mobile-dropdown-link">Overview</a>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>About Us</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Corporate Sustainability</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Diversity, Equity, and Inclusion</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Corporate Social Responsibility</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">The TCS Way</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Leadership</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">CEO & Managing Director</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Chief Operating Officer</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Board of Directors</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>In the news</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Recent News</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Press Releases</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">View All</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="navbar__mobile-item">
+                            <div class="navbar__mobile-header">
+                                <span class="navbar__mobile-link">Insights</span>
+                                <i class="fa-solid fa-chevron-down navbar__mobile-icon"></i>
+                            </div>
+                            <ul class="navbar__mobile-dropdown">
+                                <li class="navbar__mobile-dropdown-item">
+                                    <a href="#" class="navbar__mobile-dropdown-link">Overview</a>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Customer Stories</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Banking & Finance</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Healthcare</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Retail</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Perspectives</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Cloud Computing</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Artificial Intelligence</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Cybersecurity</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Topics</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Future of Work</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Sustainability</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Innovation</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="navbar__mobile-item">
+                            <div class="navbar__mobile-header">
+                                <span class="navbar__mobile-link">Careers</span>
+                                <i class="fa-solid fa-chevron-down navbar__mobile-icon"></i>
+                            </div>
+                            <ul class="navbar__mobile-dropdown">
+                                <li class="navbar__mobile-dropdown-item">
+                                    <a href="#" class="navbar__mobile-dropdown-link">Overview</a>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>India</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Mumbai</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Delhi</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Bangalore</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Hyderabad</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Americas</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">USA</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Canada</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Brazil</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Mexico</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Asia Pacific</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Australia</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Japan</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Singapore</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Europe and UK</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">United Kingdom</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Germany</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">France</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Middle East and Africa</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">UAE</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Saudi Arabia</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">South Africa</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="navbar__mobile-item">
+                            <div class="navbar__mobile-header">
+                                <span class="navbar__mobile-link">Investors</span>
+                                <i class="fa-solid fa-chevron-down navbar__mobile-icon"></i>
+                            </div>
+                            <ul class="navbar__mobile-dropdown">
+                                <li class="navbar__mobile-dropdown-item">
+                                    <a href="#" class="navbar__mobile-dropdown-link">Overview</a>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Financials</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Annual Reports</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Quarterly Results</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Financial Statements</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__mobile-dropdown-item navbar__mobile-sub-item">
+                                    <div class="navbar__mobile-sub-header">
+                                        <span>Governance</span>
+                                        <span class="navbar__mobile-toggle">+</span>
+                                    </div>
+                                    <ul class="navbar__mobile-nested-dropdown">
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Board of Directors</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Corporate Governance</a></li>
+                                        <li class="navbar__mobile-nested-item"><a href="#" class="navbar__mobile-nested-link">Committees</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navbar__mobile-utility">
+                    <a href="#" class="navbar__mobile-utility-link">CONTACT US</a>
+                    <a href="#" class="navbar__mobile-utility-link">TCS WORLDWIDE</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="content">
+
+        <section class="filters">
+            <ul class="filters__list">
+                <li class="filters__item filters__item--active" data-filter="all">All</li>
+                <li class="filters__item" data-filter="Research">Research</li>
+                <li class="filters__item" data-filter="News">News</li>
+                <li class="filters__item" data-filter="Production">Production</li>
+                <li class="filters__item" data-filter="Blog">Blog</li>
+            </ul>
+        </section>
+
+        <section class="cards">
+            <div id="dataContainer" class="cards__container"></div>
+            <div id="scrollSentinel" class="cards__sentinel">Scroll for more</div>
+        </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

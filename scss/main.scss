@@ -1,0 +1,52 @@
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'sections/navbar';
+@import 'sections/navbar-responsive';
+@import 'sections/search-bar';
+@import 'sections/filters';
+@import 'sections/cards';
+
+@import 'utilities/responsiveness';
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes foldDown {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.u-show {
+    display: block !important;
+}
+
+.u-hide {
+    display: none !important;
+}

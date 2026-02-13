@@ -1,0 +1,55 @@
+@mixin mega-menu-frame {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    width: 100%;
+    height: 500px;
+    background: $bg-dark;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+    pointer-events: none;
+    transition: visibility 0s 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin transition($args...) {
+    transition: $args;
+}
+
+@mixin responsive($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin gradient-bg {
+    background: linear-gradient(102.57deg, $accent-pink, $accent-purple 100%, $accent-purple);
+}
+
+@mixin underline-animation {
+    height: 1px;
+    @include gradient-bg;
+    width: 0;
+    position: relative;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    opacity: 0;
+    left: 50%;
+}

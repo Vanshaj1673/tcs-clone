@@ -1,0 +1,97 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+@media screen and (max-width: $bp-xl) {
+    .navbar {
+        &__wrapper {
+            padding: 0 20px;
+        }
+
+        &__menu-btn {
+            display: flex;
+            order: 1;
+            margin-right: 20px;
+        }
+
+        &__logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            order: 2;
+        }
+
+        &__logo-img {
+            max-height: 35px;
+        }
+
+        &__tata-logo {
+            display: flex;
+            order: 3;
+            margin-left: auto;
+            margin-right: 15px;
+        }
+
+        &__tata-logo-img {
+            max-height: 35px;
+        }
+
+        &__search-trigger {
+            order: 4;
+            margin-left: 0;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__utility-links {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $bp-sm) {
+    .navbar {
+        &__wrapper {
+            padding: 0 15px;
+        }
+
+        &__menu-btn {
+            display: flex;
+            order: 4;
+            margin-right: 0;
+            margin-left: 15px;
+        }
+
+        &__logo {
+            position: static;
+            left: auto;
+            transform: none;
+            order: 1;
+            margin-right: auto;
+        }
+
+        &__logo-img {
+            max-height: 32px;
+        }
+
+        &__tata-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            order: 2;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__tata-logo-img {
+            max-height: 32px;
+        }
+
+        &__search-trigger {
+            order: 3;
+            margin-left: auto;
+            margin-right: 15px;
+        }
+    }
+}

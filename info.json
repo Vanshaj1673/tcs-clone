@@ -1,0 +1,386 @@
+[
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "TCS recognized as a Leader in the Everest Group's PEAK Matrix® for Cloud-Native Application Development Services 2023",
+        "description": "TCS' comprehensive portfolio of cloud-native application development services, deep domain expertise, and strong focus on innovation have led to this recognition.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS Named a Leader in Gartner® Magic Quadrant™ for IT Services for Communications Service Providers, Worldwide",
+        "description": "TCS' strong service portfolio, global presence, and focus on delivering business value have contributed to its leadership position.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "TCS Launches New IoT Solution to Help Manufacturers Improve Operational Efficiency",
+        "description": "The new solution leverages IoT, AI, and cloud technologies to provide real-time insights into manufacturing processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "TCS Experts Discuss the Future of Work in a Post-Pandemic World",
+        "description": "In this blog post, TCS experts share their insights on how the pandemic has fundamentally changed the way we work.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "TCS Partners with Leading University to Advance AI Research",
+        "description": "The partnership will focus on developing innovative AI solutions for various industries.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS Named a Top Employer in the UK for the 10th Consecutive Year",
+        "description": "TCS' commitment to employee development, diversity, and well-being has been recognized once again.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "TCS Helps Global Retailer Transform its E-commerce Platform",
+        "description": "The transformation has led to improved customer experience and increased sales for the retailer.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "TCS Sustainability Report 2023: Progress Towards a Greener Future",
+        "description": "The report highlights TCS' efforts to reduce its carbon footprint and promote sustainable business practices.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "Accelerating Enterprise AI with TCS Pace™",
+        "description": "TCS Pace™ helps organizations accelerate their digital transformation by providing a collaborative ecosystem for innovation.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS reports strong Q3 results with double-digit growth",
+        "description": "Tata Consultancy Services (TCS) reported a strong set of results for the third quarter, driven by broad-based growth across all markets and verticals.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "Digital Twin Technology: Transforming the Manufacturing Landscape",
+        "description": "How digital twins are enabling manufacturers to simulate, predict, and optimize their production processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "The Role of Cybersecurity in the Age of Hybrid Work",
+        "description": "Protecting enterprise data and infrastructure in an increasingly distributed and connected workforce.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "Quantum Computing: The Next Frontier of Innovation",
+        "description": "Exploring potential applications of quantum computing in drug discovery, financial modeling, and materials science.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS awarded 'Partner of the Year' by major cloud provider",
+        "description": "The award recognizes TCS' excellence in delivering cloud-based solutions and services to its customers.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "Automotive Engineering: Driving the Future of Mobility",
+        "description": "How software-defined vehicles and electric propulsion are reshaping the automotive industry.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "Diversity and Inclusion: A Strategic Imperative for TCS",
+        "description": "Why building a diverse and inclusive workforce is essential for driving innovation and business success.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "TCS recognized as a Leader in the Everest Group's PEAK Matrix® for Cloud-Native Application Development Services 2023",
+        "description": "TCS' comprehensive portfolio of cloud-native application development services, deep domain expertise, and strong focus on innovation have led to this recognition.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS Named a Leader in Gartner® Magic Quadrant™ for IT Services for Communications Service Providers, Worldwide",
+        "description": "TCS' strong service portfolio, global presence, and focus on delivering business value have contributed to its leadership position.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "TCS Launches New IoT Solution to Help Manufacturers Improve Operational Efficiency",
+        "description": "The new solution leverages IoT, AI, and cloud technologies to provide real-time insights into manufacturing processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "TCS Experts Discuss the Future of Work in a Post-Pandemic World",
+        "description": "In this blog post, TCS experts share their insights on how the pandemic has fundamentally changed the way we work.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "TCS Partners with Leading University to Advance AI Research",
+        "description": "The partnership will focus on developing innovative AI solutions for various industries.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS Named a Top Employer in the UK for the 10th Consecutive Year",
+        "description": "TCS' commitment to employee development, diversity, and well-being has been recognized once again.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "TCS Helps Global Retailer Transform its E-commerce Platform",
+        "description": "The transformation has led to improved customer experience and increased sales for the retailer.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "TCS Sustainability Report 2023: Progress Towards a Greener Future",
+        "description": "The report highlights TCS' efforts to reduce its carbon footprint and promote sustainable business practices.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "Accelerating Enterprise AI with TCS Pace™",
+        "description": "TCS Pace™ helps organizations accelerate their digital transformation by providing a collaborative ecosystem for innovation.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS reports strong Q3 results with double-digit growth",
+        "description": "Tata Consultancy Services (TCS) reported a strong set of results for the third quarter, driven by broad-based growth across all markets and verticals.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "Digital Twin Technology: Transforming the Manufacturing Landscape",
+        "description": "How digital twins are enabling manufacturers to simulate, predict, and optimize their production processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "The Role of Cybersecurity in the Age of Hybrid Work",
+        "description": "Protecting enterprise data and infrastructure in an increasingly distributed and connected workforce.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "Quantum Computing: The Next Frontier of Innovation",
+        "description": "Exploring potential applications of quantum computing in drug discovery, financial modeling, and materials science.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS awarded 'Partner of the Year' by major cloud provider",
+        "description": "The award recognizes TCS' excellence in delivering cloud-based solutions and services to its customers.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "Automotive Engineering: Driving the Future of Mobility",
+        "description": "How software-defined vehicles and electric propulsion are reshaping the automotive industry.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "Diversity and Inclusion: A Strategic Imperative for TCS",
+        "description": "Why building a diverse and inclusive workforce is essential for driving innovation and business success.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "TCS recognized as a Leader in the Everest Group's PEAK Matrix® for Cloud-Native Application Development Services 2023",
+        "description": "TCS' comprehensive portfolio of cloud-native application development services, deep domain expertise, and strong focus on innovation have led to this recognition.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS Named a Leader in Gartner® Magic Quadrant™ for IT Services for Communications Service Providers, Worldwide",
+        "description": "TCS' strong service portfolio, global presence, and focus on delivering business value have contributed to its leadership position.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "TCS Launches New IoT Solution to Help Manufacturers Improve Operational Efficiency",
+        "description": "The new solution leverages IoT, AI, and cloud technologies to provide real-time insights into manufacturing processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "TCS Experts Discuss the Future of Work in a Post-Pandemic World",
+        "description": "In this blog post, TCS experts share their insights on how the pandemic has fundamentally changed the way we work.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "TCS Partners with Leading University to Advance AI Research",
+        "description": "The partnership will focus on developing innovative AI solutions for various industries.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS Named a Top Employer in the UK for the 10th Consecutive Year",
+        "description": "TCS' commitment to employee development, diversity, and well-being has been recognized once again.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "TCS Helps Global Retailer Transform its E-commerce Platform",
+        "description": "The transformation has led to improved customer experience and increased sales for the retailer.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "TCS Sustainability Report 2023: Progress Towards a Greener Future",
+        "description": "The report highlights TCS' efforts to reduce its carbon footprint and promote sustainable business practices.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "Accelerating Enterprise AI with TCS Pace™",
+        "description": "TCS Pace™ helps organizations accelerate their digital transformation by providing a collaborative ecosystem for innovation.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS reports strong Q3 results with double-digit growth",
+        "description": "Tata Consultancy Services (TCS) reported a strong set of results for the third quarter, driven by broad-based growth across all markets and verticals.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "Digital Twin Technology: Transforming the Manufacturing Landscape",
+        "description": "How digital twins are enabling manufacturers to simulate, predict, and optimize their production processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "The Role of Cybersecurity in the Age of Hybrid Work",
+        "description": "Protecting enterprise data and infrastructure in an increasingly distributed and connected workforce.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "Quantum Computing: The Next Frontier of Innovation",
+        "description": "Exploring potential applications of quantum computing in drug discovery, financial modeling, and materials science.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS awarded 'Partner of the Year' by major cloud provider",
+        "description": "The award recognizes TCS' excellence in delivering cloud-based solutions and services to its customers.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "Automotive Engineering: Driving the Future of Mobility",
+        "description": "How software-defined vehicles and electric propulsion are reshaping the automotive industry.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "Diversity and Inclusion: A Strategic Imperative for TCS",
+        "description": "Why building a diverse and inclusive workforce is essential for driving innovation and business success.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "TCS recognized as a Leader in the Everest Group's PEAK Matrix® for Cloud-Native Application Development Services 2023",
+        "description": "TCS' comprehensive portfolio of cloud-native application development services, deep domain expertise, and strong focus on innovation have led to this recognition.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS Named a Leader in Gartner® Magic Quadrant™ for IT Services for Communications Service Providers, Worldwide",
+        "description": "TCS' strong service portfolio, global presence, and focus on delivering business value have contributed to its leadership position.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "TCS Launches New IoT Solution to Help Manufacturers Improve Operational Efficiency",
+        "description": "The new solution leverages IoT, AI, and cloud technologies to provide real-time insights into manufacturing processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "TCS Experts Discuss the Future of Work in a Post-Pandemic World",
+        "description": "In this blog post, TCS experts share their insights on how the pandemic has fundamentally changed the way we work.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "TCS Partners with Leading University to Advance AI Research",
+        "description": "The partnership will focus on developing innovative AI solutions for various industries.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS Named a Top Employer in the UK for the 10th Consecutive Year",
+        "description": "TCS' commitment to employee development, diversity, and well-being has been recognized once again.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "TCS Helps Global Retailer Transform its E-commerce Platform",
+        "description": "The transformation has led to improved customer experience and increased sales for the retailer.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "TCS Sustainability Report 2023: Progress Towards a Greener Future",
+        "description": "The report highlights TCS' efforts to reduce its carbon footprint and promote sustainable business practices.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_one.png",
+        "title": "Accelerating Enterprise AI with TCS Pace™",
+        "description": "TCS Pace™ helps organizations accelerate their digital transformation by providing a collaborative ecosystem for innovation.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_two.png",
+        "title": "TCS reports strong Q3 results with double-digit growth",
+        "description": "Tata Consultancy Services (TCS) reported a strong set of results for the third quarter, driven by broad-based growth across all markets and verticals.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_three.png",
+        "title": "Digital Twin Technology: Transforming the Manufacturing Landscape",
+        "description": "How digital twins are enabling manufacturers to simulate, predict, and optimize their production processes.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_four.png",
+        "title": "The Role of Cybersecurity in the Age of Hybrid Work",
+        "description": "Protecting enterprise data and infrastructure in an increasingly distributed and connected workforce.",
+        "tag": "Blog"
+    },
+    {
+        "imageUrl": "assets/cards/card_five.png",
+        "title": "Quantum Computing: The Next Frontier of Innovation",
+        "description": "Exploring potential applications of quantum computing in drug discovery, financial modeling, and materials science.",
+        "tag": "Research"
+    },
+    {
+        "imageUrl": "assets/cards/card_six.png",
+        "title": "TCS awarded 'Partner of the Year' by major cloud provider",
+        "description": "The award recognizes TCS' excellence in delivering cloud-based solutions and services to its customers.",
+        "tag": "News"
+    },
+    {
+        "imageUrl": "assets/cards/card_seven.png",
+        "title": "Automotive Engineering: Driving the Future of Mobility",
+        "description": "How software-defined vehicles and electric propulsion are reshaping the automotive industry.",
+        "tag": "Production"
+    },
+    {
+        "imageUrl": "assets/cards/card_eight.png",
+        "title": "Diversity and Inclusion: A Strategic Imperative for TCS",
+        "description": "Why building a diverse and inclusive workforce is essential for driving innovation and business success.",
+        "tag": "Blog"
+    }
+]
