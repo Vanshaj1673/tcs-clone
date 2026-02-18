@@ -317,12 +317,30 @@
   padding-top: 80px;
   position: absolute;
   top: 0;
-  right: 0;
-  transform: translateX(100%);
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
   transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
   display: flex;
   flex-direction: column;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__mobile-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1060;
+  padding: 10px;
+}
+
+.navbar__mobile-close:hover {
+  color: #EE3984;
 }
 
 .navbar__mobile-links {
@@ -898,13 +916,22 @@
   .navbar__mobile-wrapper {
     width: 100%;
     max-width: 100%;
-    left: auto;
-    right: 0;
-    transform: translateX(100%);
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  .navbar__mobile-close {
+    right: auto;
+    left: 20px;
+    /* On tablet (left menu), close button should be on left? Or maybe keeping it right inside the menu is fine. Let's keep it right for consistency? */
+    /* Actually if menu slides from left, close button usually on right side of the menu panel */
+    /* No, standard is usually top right corner of the panel regardless of slide direction */
+    /* Wait, if it slides from left, the content is on the left. The top-right of the panel is correct. */
   }
 
   .navbar__mobile-wrapper::-webkit-scrollbar {
@@ -972,6 +999,31 @@
   .navbar__mobile-menu {
     top: 60px;
     height: calc(100vh - 60px);
+  }
+
+  /* Force Right Side Menu on Mobile (max-width: 600px) */
+  .navbar__mobile-wrapper {
+    left: auto;
+    right: 0;
+    transform: translateX(100%) !important;
+    position: absolute;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar__mobile-close {
+    left: 20px;
+    right: auto;
+    /* Wait, if menu is right-aligned, close button should be on left or right? */
+    /* Usually top-right or top-left. If panel is on right, top-left of panel is better visually? */
+    /* Let's stick to standard top-right of the panel for now unless requested otherwise */
+    top: 20px;
+    right: auto;
+    left: 20px;
+  }
+
+  /* Ensure open state works on mobile */
+  .navbar__mobile-menu.is-open .navbar__mobile-wrapper {
+    transform: translateX(0) !important;
   }
 }
 

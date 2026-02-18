@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (state.searchQuery || state.filters.size > 0) {
             if (filteredData.length === 0) {
-                
+
                 dataContainer.innerHTML = '<div class="no-results">No results found matching your criteria.</div>';
                 scrollSentinel.style.display = 'none';
                 return;
@@ -167,6 +167,15 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('is-open');
             document.body.style.overflow = mobileMenu.classList.contains('is-open') ? 'hidden' : '';
         });
+
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        if (mobileCloseBtn) {
+            mobileCloseBtn.addEventListener('click', () => {
+                menuBtn.classList.remove('is-active');
+                mobileMenu.classList.remove('is-open');
+                document.body.style.overflow = '';
+            });
+        }
 
         const mobileHeaders = mobileMenu.querySelectorAll('.navbar__mobile-header');
         mobileHeaders.forEach(header => {
@@ -249,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.searchQuery = query;
 
         if (query.length > 0) {
-            
+
             let potentialMatches = allData;
             if (state.filters.size > 0) {
                 potentialMatches = potentialMatches.filter(d => state.filters.has(d.tag));
@@ -262,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (autocompleteResults.length > 0) {
                 autocompleteBox.style.display = 'block';
-                
+
                 autocompleteList.innerHTML = autocompleteResults.slice(0, 5).map(item =>
                     `<li class="autocomplete-item" tabindex="0">${item.title}</li>`
                 ).join('');
