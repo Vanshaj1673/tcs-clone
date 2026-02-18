@@ -259,22 +259,7 @@
         box-shadow: 10px 0 30px $shadow-dark;
     }
 
-    &__mobile-close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: $text-white;
-        font-size: 24px;
-        cursor: pointer;
-        z-index: 1060;
-        padding: 10px;
 
-        &:hover {
-            color: $primary-pink;
-        }
-    }
 
     &__mobile-links {
         list-style: none;

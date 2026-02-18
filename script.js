@@ -168,15 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = mobileMenu.classList.contains('is-open') ? 'hidden' : '';
         });
 
-        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
-        if (mobileCloseBtn) {
-            mobileCloseBtn.addEventListener('click', () => {
-                menuBtn.classList.remove('is-active');
-                mobileMenu.classList.remove('is-open');
-                document.body.style.overflow = '';
-            });
-        }
-
         const mobileHeaders = mobileMenu.querySelectorAll('.navbar__mobile-header');
         mobileHeaders.forEach(header => {
             header.addEventListener('click', (e) => {

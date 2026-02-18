@@ -167,8 +167,8 @@
             margin: 0 5px;
 
             img {
-                height: 20px;
-                max-width: 40px;
+                height: 30px;
+                max-width: 60px;
             }
         }
 
@@ -184,21 +184,6 @@
             box-shadow: -10px 0 30px $shadow-color;
         }
 
-        &__mobile-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            color: $text-white;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 1060;
-            padding: 10px;
 
-            &:hover {
-                color: $primary-pink;
-            }
-        }
     }
 }
