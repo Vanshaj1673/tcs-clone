@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
+    function debounce(func, timeout = 300) {
+        let timer;
+        return (...args) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => { func.apply(this, args); }, timeout);
+        };
+    }
+
     const templateSource = `
         {{#each gotData}}
         <article class="card">
@@ -29,7 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const template = Handlebars.compile(templateSource);
 
     let allData = [];
-    let selectedFilters = new Set();
+    const state = {
+        searchQuery: '',
+        filters: new Set()
+    };
     let start = 0;
     const limit = 4;
     let isLoading = false;
@@ -54,12 +65,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function getFilteredData() {
+        let data = allData;
+
+        if (state.filters.size > 0) {
+            data = data.filter(d => state.filters.has(d.tag));
+        }
+
+        if (state.searchQuery) {
+            const query = state.searchQuery.toLowerCase();
+            data = data.filter(item =>
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+        }
+
+        return data;
+    }
+
     function loadMore() {
         if (isLoading) return;
 
-        let filteredData = allData;
-        if (selectedFilters.size > 0) {
-            filteredData = allData.filter(d => selectedFilters.has(d.tag));
+        const filteredData = getFilteredData();
+
+        if (state.searchQuery || state.filters.size > 0) {
+            if (filteredData.length === 0) {
+                
+                dataContainer.innerHTML = '<div class="no-results">No results found matching your criteria.</div>';
+                scrollSentinel.style.display = 'none';
+                return;
+            }
         }
 
         if (start >= filteredData.length) {
@@ -209,53 +244,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    searchInput.addEventListener('input', (e) => {
+    const handleSearchInput = debounce((e) => {
         const query = e.target.value.toLowerCase().trim();
+        state.searchQuery = query;
+
         if (query.length > 0) {
-            const filtered = allData.filter(item =>
+            
+            let potentialMatches = allData;
+            if (state.filters.size > 0) {
+                potentialMatches = potentialMatches.filter(d => state.filters.has(d.tag));
+            }
+
+            const autocompleteResults = potentialMatches.filter(item =>
                 item.title.toLowerCase().includes(query) ||
                 item.description.toLowerCase().includes(query)
             );
 
-            if (filtered.length > 0) {
+            if (autocompleteResults.length > 0) {
                 autocompleteBox.style.display = 'block';
-                autocompleteList.innerHTML = filtered.slice(0, 5).map(item =>
+                
+                autocompleteList.innerHTML = autocompleteResults.slice(0, 5).map(item =>
                     `<li class="autocomplete-item" tabindex="0">${item.title}</li>`
                 ).join('');
-                renderCards(filtered);
             } else {
                 autocompleteBox.style.display = 'block';
                 autocompleteList.innerHTML = '<li class="autocomplete-item">No results found</li>';
-                dataContainer.innerHTML = '<div class="no-results">No results found</div>';
             }
-
-            scrollSentinel.style.display = 'none';
         } else {
             autocompleteBox.style.display = 'none';
-            resetToInitial();
         }
+
+        resetToInitial();
     });
+
+    searchInput.addEventListener('input', handleSearchInput);
 
     filterItems.forEach(item => {
         item.addEventListener('click', () => {
             const filterValue = item.getAttribute('data-filter');
 
             if (filterValue === 'all') {
-                selectedFilters.clear();
+                state.filters.clear();
                 filterItems.forEach(i => i.classList.remove('filters__item--active'));
                 item.classList.add('filters__item--active');
             } else {
                 document.querySelector('[data-filter="all"]').classList.remove('filters__item--active');
 
-                if (selectedFilters.has(filterValue)) {
-                    selectedFilters.delete(filterValue);
+                if (state.filters.has(filterValue)) {
+                    state.filters.delete(filterValue);
                     item.classList.remove('filters__item--active');
                 } else {
-                    selectedFilters.add(filterValue);
+                    state.filters.add(filterValue);
                     item.classList.add('filters__item--active');
                 }
 
-                if (selectedFilters.size === 0) {
+                if (state.filters.size === 0) {
                     document.querySelector('[data-filter="all"]').classList.add('filters__item--active');
                 }
             }
@@ -274,11 +317,10 @@ document.addEventListener('DOMContentLoaded', () => {
     autocompleteList.addEventListener('click', (e) => {
         if (e.target.classList.contains('autocomplete-item') && e.target.textContent !== 'No results found') {
             const selectedTitle = e.target.textContent;
-            const item = allData.filter(d => d.title === selectedTitle);
-            renderCards(item);
-            autocompleteBox.style.display = 'none';
+            state.searchQuery = selectedTitle;
             searchInput.value = selectedTitle;
-            scrollSentinel.style.display = 'none';
+            autocompleteBox.style.display = 'none';
+            resetToInitial();
         }
     });
 

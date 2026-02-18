@@ -25,8 +25,10 @@
             overflow-x: auto;
             gap: 15px;
             padding: 0 10px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
         &::-webkit-scrollbar {
